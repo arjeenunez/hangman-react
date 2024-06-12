@@ -1,0 +1,79 @@
+.Game {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.Game-word-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.Game-word-letter-container {
+    width: 60px;
+    height: 60px;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+}
+
+.Game-word-letter {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.Game-word-letter-hide {
+    text-align: center;
+    margin-bottom: 0;
+    display: none;
+}
+
+.Game-button-keys-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.Game-button-keys {
+    background-color: beige;
+    width: 40px;
+    box-shadow: 0 5px 0 0 rgb(145, 145, 129);
+}
+
+.Game-button-keys:hover {
+    background-color: rgb(164, 164, 103);
+}
+
+.Game-button-replay {
+    margin: 25px auto;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0 10px 0 0 rgb(8, 8, 8);
+}
+
+.Game-button-replay:hover {
+    color: red;
+}
+
+.Game button {
+    border-radius: 0.15em;
+    transition: all ease-in 50ms;
+    font-size: 24px;
+    appearance: none;
+    border: none;
+}
+
+.Game button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 0;
+}
+
+.Game-message-container {
+    margin-top: 15px;
+}

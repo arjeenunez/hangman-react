@@ -1,0 +1,10 @@
+.Hangman-container {
+    background-color: red;
+    width: 500px;
+}
+
+.Hangman {
+    margin: auto;
+    display: block;
+    width: 500px;
+}
