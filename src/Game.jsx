@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Hangman from "./Hangman";
 import { randomWord } from "./words";
 import "./Game.css"
+import Button from "./Button"
 
 class Game extends Component {
     static defaultProps = {
@@ -28,8 +29,9 @@ class Game extends Component {
             remWord: [...org]
         }))
     }
-    guessLetter(evt) {
-        const guessedLetter = evt.target.innerText;
+    guessLetter(letter) {
+        const guessedLetter = letter;
+        // const guessedLetter = evt.target.innerText;
         const { word, lettersGuessed } = this.state;
         const isGuessed = lettersGuessed.includes(guessedLetter);
         const isCorrect = word.includes(guessedLetter);
@@ -74,6 +76,7 @@ class Game extends Component {
                 </div>
                 <div className="Game-button-keys-container">
                     {keyboardLetters.map((letter, i) => (
+                        // <Button key={i} whenClicked={this.guessLetter} shouldDisable={lettersGuessed.includes(letter) || word.length === 0} value={ letter } />
                         <button key={ i } onClick={this.guessLetter} className="Game-button-keys" disabled={lettersGuessed.includes(letter) || word.length === 0}>{ letter }</button>
                     ))}
                 </div>
